@@ -1,0 +1,21 @@
+# Site settings
+title: Adventures Of Jonathan
+header-img: img/home-bg.png
+email: redcabinny@gmail.com
+copyright_name: jonfoster9999
+description: > # this means to ignore newlines until "baseurl:"
+  Programming, Music, Nintendo, Food, and more.
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: redcabinmusic
+github_username:  jonfoster9999
+learn_profile: jonfoster9999
+email_username: redcabinny@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
