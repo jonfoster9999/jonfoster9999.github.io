@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "My CLI Gem"
+date:   2017-01-20 03:11:08 +0000
+---
+
+
+
+This was a great experience for me. I feel like I'm barely scratching the surface of object oriented programming, yet it's blowing my mind! I kicked around a few ideas for the focus of my project, and eventually decided on scraping the best selling video games of various consoles from Amazon.
+
+I prepared for the project by looking over the CLI music project from the previous labs, as well as watching all the tutorials from Avi that I could find on the subject (I love the Learn youtube channel!). 
+
+I followed the suggestions of making a NOTES.md file in which I sort of sketched out what the desired interface would be. Then I began coding. It was going great, I was using pry to find all the selectors I needed for scraping, and got my CLI working to the point where I was able to select a gaming console in my program and see a list of its 20 top selling video games. Great! I took a short break, came back, and decided it was time to write the scraper method for the individual landing pages of the games themselves (which would be the third level down, the "deep" level of my program). Here, I encountered a problem. When I tried to perform the same operation (using open-uri and nokogiri) for the urls of the individual game landing pages, open-uri was returning an error...a 503 error to be exact. Some googling around let me know that Amazon might be protecting and deterring against this type of scraping. I began reading about some workarounds like using proxies via the Mechanize gem and using spoof headers. This was all very interesting to me and I considered diving further down that rabbit hole, but I started to think that maybe that was beyond the scope of this project, that maybe I should find something else that wasn't going to give me so much resistance, and get back to object orientation and scraping. I decided to cut my losses on the Amazon project and come back to spoof headers and proxies later.
+
+I still liked my idea and considered some other options. After browsing some of Amazon's competitors I decided on newegg.com. The format of their best sellers list was almost identical, and in fact, a lot of my code would still work! I started a new project and transferred what I could. The scraper method even almost worked besides changing a couple of selectors. 
+
+I really tried to remember what we learned throughout the OO Ruby section, particularly keeping in mind the specific relationships that were discussed (has many, belongs to, has many through). I took to heart the instructions about preferring objects to hashes, and this kept my mind asking questions like "what would this object be made up of" and "how would this object interact with other objects?" For example, instead of making the scraper return a hash, I programmed it to populate a top_twenty_list object (which is itself instantiated with a console object) with individual list_item objects, while also making those list_item objects aware of the consoles they belong to, etc. I found this really challenging but I also really feel like I learned a lot here. The whole topic of object orientation is fascinating, and I'm also learning that I love Ruby!
+
+I faced another interesting challenge about 2/3rds of the way through the project. When I was deciding on newegg.com i of course checked that I would be allowed to scrape all the necessary pages to avoid what happened with Amazon. However, I began getting a "REDIRECT FORBIDDEN" error when trying to go from my top twenty list page to my product page in my own program. This error was again coming from open-uri. I found a 3rd party gem that helped out called "open_uri_redirections" which fixed the error. This gem allowed me to write one line of code:
+
+:allow_redirections => :safe
+
+which saved my whole program. I guess it is a lesson in the power of gems!
+
+In conclusion I had a great time working through the challenges presented in planning and executing this gem. It came out pretty cool and works the way I originally envisioned it in the NOTES.md file. Looking forward to many more projects!
+
+
+
+
