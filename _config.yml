@@ -4,9 +4,9 @@ header-img: img/home-bg.png
 email: redcabinny@gmail.com
 copyright_name: jonfoster9999
 description: > # this means to ignore newlines until "baseurl:"
-  Programming, Music, Nintendo, Food, and more.
+  Programming, Music, Retro Games, Food, and more.
 baseurl: "" # the subpath of your site, e.g. /blog
-twitter_username: redcabinmusic
+twitter_username: RedCabinMusic
 github_username:  jonfoster9999
 learn_profile: jonfoster9999
 email_username: redcabinny@gmail.com
